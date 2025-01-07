@@ -61,11 +61,16 @@ Bring up the Sail environment:
 ### 4. Run Migrations
 Run the database migrations to set up the schema:
 ```bash
-./vendor/bin/sail artisan migrate
+./vendor/bin/sail php artisan migrate
 ```
 
 ### 5. Run Seeder
 Seed the `Jobs` table with sample data:
 ```bash
-./vendor/bin/sail artisan db:seed --class=JobsSeeder
+./vendor/bin/sail php artisan db:seed --class=JobsSeeder
+```
+### 6. Frontend Setup
+```bash
+npm install
+npm run dev
 ```

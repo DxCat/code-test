@@ -25,10 +25,10 @@ const SQLImprovement = () => {
         axios.get("/api/new-query", { params: { search } }),
       ]);
 
-      setOriginalResult(originalResponse.data);
+      setOriginalResult(originalResponse.data.results);
       setOriginalTime(originalResponse.data.execution_time.toFixed(2));
 
-      setNewResult(newResponse.data);
+      setNewResult(newResponse.data.results);
       setNewTime(newResponse.data.execution_time.toFixed(2));
     } catch (err) {
       setError(err.response?.data?.message || "An error occurred");
